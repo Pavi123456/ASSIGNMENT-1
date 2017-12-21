@@ -9,17 +9,19 @@ int main() {
 	for(i=0;i<n;i++)
 	{
 	    count=1;
+	    if(str[i]=='+')
+	    {
+		    continue;
+	    }
 	    for(j=i+1;j<n;j++)
 	    {
 	         if(str[i]==str[j])
 	         {
 	             count++;
+			str[j]='+';
 	         }
 	    }
 	    	 printf("%c-%d\t",str[i],count);
 	 }
-	 //for(i=0;i<n;i++){
-
-	// }
 	return 0;
 }
