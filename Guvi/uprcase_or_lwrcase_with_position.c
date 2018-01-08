@@ -11,7 +11,7 @@
   
      if(t==1)
      {
-       for(i=p-1;i<n;i=i+p+i)
+       for(i=p-1;i<n;i=i+p)
        {
          u=str[i];
        if(u<97)
