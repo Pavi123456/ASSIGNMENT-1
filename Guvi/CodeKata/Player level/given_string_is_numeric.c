@@ -1,30 +1,28 @@
 #include <stdio.h>
 #include<string.h>
-int main(void) 
-{
-	char str[20];
-	scanf("%[^\n]s",str);
-	int i,flag;
-	for(i=0;str[i]!='\0';i++)
+int main() {
+	char a[10];
+	int count=0,i,n;
+	scanf("%s",a);
+	n=strlen(a);
+	for(i=0;i<n;i++)
 	{
-		if(str[i]>='0' && str[i]<='9')
-		{
-			flag=1;
-		}
-		else
-		{
-			flag=0;
-			break;
-		}
+	    if(a[i]>='0'&&a[i]<='9')
+	    {
+	        count=0;
+	    }
+	    else
+	    {
+	        count++;
+	    }
 	}
-	if(flag==0)
+	if(count==0)
 	{
-		printf("\nno");
+	    printf("yes");
 	}
 	else
 	{
-		printf("\nyes");
+	    printf("no");
 	}
-	
 	return 0;
 }
